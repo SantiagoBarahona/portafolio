@@ -1,0 +1,27 @@
+---
+const links = [
+    {
+        label: 'Inicio',
+        href: '/#hero'
+    },
+    {
+        label: 'Proyectos',
+        href: '/#projects'
+    },
+    {
+        label: 'Tecnologías',
+        href: '/#stack'
+    },
+]
+---
+
+<nav class="w-screen flex justify-between px-16 py-2 bg-black text-white">
+    <div>
+        <h1 class="text-lg">Santiago Zapata Barahona</h1>
+    </div>
+    <ul class="flex gap-2">
+        {links.map(link => 
+            <li><a href={link.href}>{link.label}</a></li>
+        )}
+    </ul>
+</nav>
