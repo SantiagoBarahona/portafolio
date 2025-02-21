@@ -1,0 +1,22 @@
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+import Auth0 from "../icons/Auth0.astro";
+import Neon from "../icons/Neon.astro";
+import Next from "../icons/Next.astro";
+import Postgres from "../icons/Postgres.astro";
+import Tailwind from "../icons/Tailwind.astro";
+
+interface Props {
+    name: "Astro" | "Tailwind" | "Next" | "Postgres" | string;
+}
+
+const { name } = Astro.props;
+---
+
+{name == "Astro" && <AstroIcon />}
+{name == "Tailwind" && <Tailwind />}
+{name == "Next" && <Next />}
+{name == "Postgres" && <Postgres />}
+{name == "Auth0" && <Auth0 />}
+{name == "Neon" && <Neon />}
+

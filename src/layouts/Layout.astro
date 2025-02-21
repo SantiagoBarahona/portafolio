@@ -1,5 +1,7 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import Navbar from "@components/Navbar.astro";
+import "@styles/global.css"
+
 ---
 
 <!doctype html>
@@ -15,21 +17,13 @@ import Navbar from "../components/Navbar.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Portafolio - Santiago Zapata Barahona</title>
 	</head>
-	<body>
+	<body class="antialiased bg-black/90">
 		<header>
-			<Navbar/>
+			<Navbar />
 		</header>
-		<main>
+		<main class="[&>section]:px-8 [&>section]:md:px-16 [&>section]:py-16 [&>section]:max-w-[1000px] [&>section]:mx-auto ">
 			<slot />
 		</main>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

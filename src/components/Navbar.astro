@@ -1,27 +1,72 @@
 ---
 const links = [
     {
-        label: 'Inicio',
-        href: '/#hero'
+        label: "Inicio",
+        href: "/#hero",
     },
     {
-        label: 'Proyectos',
-        href: '/#projects'
+        label: "Proyectos",
+        href: "/#projects",
     },
     {
-        label: 'Tecnologías',
-        href: '/#stack'
+        label: "Conóceme",
+        href: "/#about",
     },
-]
+    {
+        label: "Tecnologías",
+        href: "/#stack",
+    },
+];
+
 ---
 
-<nav class="w-screen flex justify-between px-16 py-2 bg-black text-white">
-    <div>
-        <h1 class="text-lg">Santiago Zapata Barahona</h1>
-    </div>
-    <ul class="flex gap-2">
-        {links.map(link => 
-            <li><a href={link.href}>{link.label}</a></li>
-        )}
+<nav
+    class="fixed top-0 z-10 w-screen flex px-16 py-2 text-white font-[Bebas_Neue] text-2xl"
+>
+    <ul class="ml-auto flex gap-2">
+        {
+            links.map((link) => (
+                <li>
+                    <a
+                    class="hover:text-fuchsia-400 transition-colors duration-100 hover:ease-in ease-out navbar-link"
+                    id={link.href}
+                    href={link.href}>{link.label}</a>
+                </li>
+            ))
+        }
     </ul>
 </nav>
+
+<style>
+    nav {
+        animation: scrollDown both;
+        animation-timeline: scroll();
+        animation-range: entry 1% cover 5%;
+    }
+
+    @keyframes scrollDown {
+        to {
+            background-color: #ffffff20;
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    .active{
+        color: var(--color-blue-400);
+    }
+</style>
+
+<script>
+    const links = document.querySelectorAll('.navbar-link')
+    const setActiveLink = (activeRoute: string) => {
+        links.forEach(link => {
+            if(link.id == activeRoute) link.classList.add('active')
+            else link.classList.remove('active')
+        })
+    }
+    let fullLocation = `${location.pathname}${location.hash}`
+    setActiveLink(fullLocation)
+    window.addEventListener('hashchange', () => {
+        setActiveLink(`${location.pathname}${location.hash}`)
+    });
+</script>

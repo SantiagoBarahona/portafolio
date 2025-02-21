@@ -1,0 +1,29 @@
+---
+import { githubRoute, linkedInRoute, xRoute } from "../data/Links";
+import Github from "../icons/Github.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import X from "../icons/X.astro";
+---
+
+<div class="flex gap-3">
+    <a href={githubRoute}>
+        <Github/>
+    </a>
+    <a href={linkedInRoute}>
+        <LinkedIn/>
+    </a>
+    <a href={xRoute}>
+        <X/>
+    </a>
+</div>
+
+<style>
+    a{
+        transition: transform 100ms ease-in;
+    }
+
+    a:hover{
+        transition-timing-function: ease-out;
+        transform: scale(1.15);
+    }
+</style>

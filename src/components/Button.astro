@@ -1,0 +1,20 @@
+---
+interface Props {
+    class?: string
+    href?: string
+    style?: 'primary' | 'secondary'
+}
+
+const {class: className, style = 'primary', href} = Astro.props
+const Component = href ? 'a' : 'button'
+const styles: Record<string, string> = {
+    primary: 'bg-fuchsia-600 text-white cursor-pointer hover:shadow-blue-600'
+}
+
+const currentStyle = styles[style]
+---
+
+
+<Component href={href} class:list={[className, currentStyle, 'w-fit p-4 rounded-md shadow-md shadow-transparent transition-shadow duration-200 hover:ease-in ease-out']}>
+    <slot/>
+</Component>

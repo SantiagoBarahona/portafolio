@@ -1,12 +1,19 @@
-<section class="h-screen bg-emerald-500 m-auto max-w-[1000px]">
-    <main class="relative">
-        <div class="w-full h-full flex flex-col items-end bg-red-400 ">
-            <h1 class="text-4xl">Santiago Zapata Barahona</h1>
-            <h2 class="text-3xl">Full stack developer</h2>
-            <img src="developer.png" class="object-center object-contain" alt="developer"/>
+---
+import Button from "@components/Button.astro";
+import Contacts from "@components/Contacts.astro";
+---
+
+<section id="hero" class="lg:h-screen text-white relative md:mt-auto">
+    <main class="grid sm:grid-cols-2 gap-8">
+        <div class="w-ƒit h-fit flex flex-col">
+            <span class="text-zinc-400 text-xl">¡Hola! me llamo</span>
+            <h1 class="text-7xl lg:text-8xl text-blue-600 text-balance font-[Bebas_Neue]">Santiago Zapata Barahona</h1>
+            <h2 class="text-4xl mb-8">Full stack developer</h2>
+            <Contacts/>
+            <Button class="mt-8 text-center max-sm:w-full" href="/#about">Conoce más sobre mí</Button>
         </div>
-        <div class="left-0 top-8 bg-red-100 absolute w-[500px] h-[500px]">
-            <img src="marco-ventana.png" class="w-full h-auto object-center object-contain" alt="marco-ventana"/>
+        <div class="hidden sm:block rounded-sm overflow-hidden shadow-md shadow-black">
+            <img src='/santiago.jpeg' alt="Retrato de Santiago Zapata Barahona" class="w-full h-full object-cover object-center">
         </div>
     </main>
 </section>

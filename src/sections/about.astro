@@ -1,0 +1,69 @@
+---
+import Card from "../components/Card.astro";
+import { Image } from "astro:assets";
+---
+
+<section id="about">
+    <header>
+        <h1 class="text-white text-5xl font-[Bebas_Neue] text-center mb-4">
+            Acerca de mí 👷🏻
+        </h1>
+    </header>
+    <main class="text-white flex flex-wrap gap-4 justify-center">
+        <Card
+            title="Santiago Zapata Barahona"
+            description="Desarollador Full Stack"
+        >
+            <img
+                slot="image"
+                src="/santiago.jpeg"
+                alt="Retrato de Santiago Zapata Barahona"
+                class="w-full h-[200px] object-cover object-center"
+                width={959}
+                height={1280}
+            />
+            <div slot="content">
+                <ul class="text-black">
+                    <li>🗓 22 años</li>
+                    <li>📍 Medellín, Antioquia, Colombia</li>
+                    <li>🎓 Estudiante de Ingeniería de Sistemas</li>
+                    <li>🚇 Conductor de trenes</li>
+                </ul>
+            </div>
+        </Card>
+        <div
+            class="flex flex-col justify-between max-w-[500px] [&>article]:mb-4 text-pretty [&_h2]:font-[Bebas_Neue] [&_h2]:text-2xl [&_h2]:text-blue-500"
+        >
+            <article>
+                <h2>Estudios</h2>
+                <p>
+                    Actualmente estudio <strong>Ingeniería de Sistemas</strong> en
+                    la Universidad de Antioquia, estoy cursando el sexto semestre. Aquí descrubrí mi pasión por la
+                    programación y el desarollo de software, especialmente, el desarollo
+                    web.
+                </p>
+            </article>
+
+            <article>
+                <h2>Conductor de trenes</h2>
+                <p>
+                    Trabajo como <strong
+                        >Conductor del Metro de Medellín</strong
+                    >, en este trabajo he desarollado habilidades como el
+                    trabajo en equipo, trabajo bajo presión, la responsabilidad
+                    y puntualidad.
+                </p>
+            </article>
+
+            <article>
+                <h2>Objetivos</h2>
+                <p>
+                    Me encuentro en la busqueda de experiencia laboral como
+                    desarollador, quiero aplicar todos mis conocimientos y
+                    aptitudes para aportar a un equipo en las soluciones de
+                    problemas con desarollo de software.
+                </p>
+            </article>
+        </div>
+    </main>
+</section>
