@@ -1,21 +1,20 @@
 [
-    {
-        "id":"1",
-        "title": "Gran Hotel",
-        "description": "Desarrollé la nueva pagina web de este reconocido hotel ubicado en el centro de Medellín, remplazando la web antigua por un diseño moderno y mejoré el rendimiento de la página.",
-        "stack": ["Astro", "Tailwind"],
-        "href": "https://gran-hotel.vercel.app/",
-        "imgSrc" : "/projects/gran-hotel-preview.png",
-        "github": "https://github.com/SantiagoBarahona/gran-hotel" 
-
-    },
-    {
-        "id":"2",
-        "title": "Primehotel",
-        "description": "Desarollé una aplicación web desde cero con shadcn para la gestión de reservas de un hotel, cuenta con login en Auth0 y usé Neon para la base de datos",
-        "stack": ["Next", "Tailwind", "Postgres", "Auth0", "Neon"],
-        "href": "/",
-        "imgSrc" : "/projects/gran-hotel-preview.png",
-        "github": "https://github.com/SantiagoBarahona/primehotel"
-    }
+  {
+    "id": "1",
+    "title": "Gran Hotel",
+    "description": "Desarrollé la nueva pagina web de este reconocido hotel ubicado en el centro de Medellín, remplazando la web antigua por un diseño moderno y mejoré el rendimiento de la página.",
+    "stack": ["Astro", "Tailwind"],
+    "href": "https://gran-hotel.vercel.app/",
+    "imgSrc": "/projects/gran-hotel-preview.png",
+    "github": "https://github.com/SantiagoBarahona/gran-hotel"
+  },
+  {
+    "id": "2",
+    "title": "Primehotel",
+    "description": "Desarollé una aplicación web desde cero con shadcn para la gestión de reservas de un hotel, cuenta con login en Auth0 y usé Neon para la base de datos",
+    "stack": ["Next", "Tailwind", "Postgres", "Auth0", "Neon"],
+    "href": "/",
+    "imgSrc": "/projects/gran-hotel-preview.png",
+    "github": "https://github.com/SantiagoBarahona/primehotel"
+  }
 ]
