@@ -14,7 +14,7 @@
     "description": "Desarollé una aplicación web desde cero con shadcn para la gestión de reservas de un hotel, cuenta con login en Auth0 y usé Neon para la base de datos",
     "stack": ["Next", "Tailwind", "Postgres", "Auth0", "Neon"],
     "href": "/",
-    "imgSrc": "/projects/gran-hotel-preview.png",
+    "imgSrc": "/projects/primehotel-preview.png",
     "github": "https://github.com/SantiagoBarahona/primehotel"
   }
 ]
