@@ -5,7 +5,7 @@
     "description": "Desarrollé la nueva pagina web de este reconocido hotel ubicado en el centro de Medellín, remplazando la web antigua por un diseño moderno y mejoré el rendimiento de la página.",
     "stack": ["Astro", "Tailwind"],
     "href": "https://gran-hotel.vercel.app/",
-    "imgSrc": "/projects/gran-hotel-preview.png",
+    "imgSrc": "/projects/gran-hotel-preview.webp",
     "github": "https://github.com/SantiagoBarahona/gran-hotel"
   },
   {
