@@ -1,120 +1,119 @@
 ---
-import Card from "@components/Card.astro";
-import HTML5 from "@icons/HTML5.astro";
-import CSS from "@icons/CSS.astro";
-import JavaScript from "@icons/JavaScript.astro";
-import React from "@icons/React.astro";
-import Tailwind from "@icons/Tailwind.astro";
-import Node from "@icons/Node.astro";
-import Express from "@icons/Express.astro";
-import AstroIcon from "@icons/AstroIcon.astro";
-import Next from "@icons/Next.astro";
-import Postgres from "@icons/Postgres.astro";
-import Github from "@icons/Github.astro";
-import Git from "@icons/Git.astro";
-import Neon from "@icons/Neon.astro";
-import Figma from "@icons/Figma.astro";
-import Java from "@icons/Java.astro";
-import Python from "@icons/Python.astro";
+import Card from '@components/Card.astro'
+import HTML5 from '@icons/HTML5.astro'
+import CSS from '@icons/CSS.astro'
+import JavaScript from '@icons/JavaScript.astro'
+import React from '@icons/React.astro'
+import Tailwind from '@icons/Tailwind.astro'
+import Node from '@icons/Node.astro'
+import Express from '@icons/Express.astro'
+import AstroIcon from '@icons/AstroIcon.astro'
+import Next from '@icons/Next.astro'
+import Postgres from '@icons/Postgres.astro'
+import Github from '@icons/Github.astro'
+import Git from '@icons/Git.astro'
+import Neon from '@icons/Neon.astro'
+import Figma from '@icons/Figma.astro'
+import Java from '@icons/Java.astro'
+import Python from '@icons/Python.astro'
 ---
 
 <section id="stack">
-    <h1 class="text-5xl font-[Bebas_Neue] text-center text-white mb-4">
-        Tecnologias 🛠
-    </h1>
-    <div class="grid sm:grid-cols-2 [&>article]:w-full gap-4">
-        <Card title="Frontend">
-            <div
-                slot="content"
-                class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-            >
-                <span>
-                    <HTML5 />
-                    HTML
-                </span>
-                <span>
-                    <CSS />
-                    CSS
-                </span>
-                <span>
-                    <JavaScript />
-                    JavaScript
-                </span>
-                <span>
-                    <React />
-                    React
-                </span>
-                <span>
-                    <Tailwind />
-                    Tailwind
-                </span>
-                <span>
-                    <Figma/>
-                    Figma
-                </span>
-            </div>
-        </Card>
-        <Card title="Backend">
-            <div
-                slot="content"
-                class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-            >
-                <span>
-                    <Node />
-                    NodeJs
-                </span>
-                <span>
-                    <AstroIcon />
-                    Astro
-                </span>
-                <span>
-                    <Next />
-                    Next
-                </span>
-                <span>
-                    <Postgres width={24} height={24} />
-                    Postgres
-                </span>
-                <span>
-                    <Express />
-                    ExpressJs
-                </span>
-                <span>
-                    <Neon/>
-                    Neon
-                </span>
-            </div>
-        </Card>
-        <Card title="Herramientas">
-            <div
-                slot="content"
-                class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-            >
-                <span>
-                    <Git/>
-                    Git
-                </span>
-                <span>
-                    <Github width={24} height={24} />
-                    GitHub
-                </span>
-              
-            </div>
-        </Card>
-        <Card title="Otros lenguajes">
-            <div
-                slot="content"
-                class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-            >
-                <span>
-                    <Java/>
-                    Java
-                </span>
-                <span>
-                    <Python/>
-                    Python
-                </span>
-            </div>
-        </Card>
-    </div>
+  <h1 class="text-5xl font-[Bebas_Neue] text-center text-white mb-4">
+    Tecnologías 🛠
+  </h1>
+  <div class="grid sm:grid-cols-2 [&>article]:w-full gap-4">
+    <Card title="Frontend">
+      <div
+        slot="content"
+        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
+      >
+        <span>
+          <HTML5 />
+          HTML
+        </span>
+        <span>
+          <CSS />
+          CSS
+        </span>
+        <span>
+          <JavaScript />
+          JavaScript
+        </span>
+        <span>
+          <React />
+          React
+        </span>
+        <span>
+          <Tailwind />
+          Tailwind
+        </span>
+        <span>
+          <Figma />
+          Figma
+        </span>
+      </div>
+    </Card>
+    <Card title="Backend">
+      <div
+        slot="content"
+        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
+      >
+        <span>
+          <Node />
+          NodeJs
+        </span>
+        <span>
+          <AstroIcon />
+          Astro
+        </span>
+        <span>
+          <Next />
+          Next
+        </span>
+        <span>
+          <Postgres width={24} height={24} />
+          Postgres
+        </span>
+        <span>
+          <Express />
+          ExpressJs
+        </span>
+        <span>
+          <Neon />
+          Neon
+        </span>
+      </div>
+    </Card>
+    <Card title="Herramientas">
+      <div
+        slot="content"
+        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
+      >
+        <span>
+          <Git />
+          Git
+        </span>
+        <span>
+          <Github width={24} height={24} />
+          GitHub
+        </span>
+      </div>
+    </Card>
+    <Card title="Otros lenguajes">
+      <div
+        slot="content"
+        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
+      >
+        <span>
+          <Java />
+          Java
+        </span>
+        <span>
+          <Python />
+          Python
+        </span>
+      </div>
+    </Card>
+  </div>
 </section>
