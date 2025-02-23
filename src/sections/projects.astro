@@ -1,83 +1,84 @@
 ---
-import { getCollection } from "astro:content";
-import Card from "../components/Card.astro";
-import Chip from "../components/Chip.astro";
-import Icon from "../components/Icon.astro";
-import OpenInNew from "../icons/OpenInNew.astro";
-import Github from "../icons/Github.astro";
+import { getCollection } from 'astro:content'
+import Card from '../components/Card.astro'
+import Chip from '../components/Chip.astro'
+import Icon from '../components/Icon.astro'
+import OpenInNew from '../icons/OpenInNew.astro'
+import Github from '../icons/Github.astro'
 
-const projects = await getCollection("projects");
+const projects = await getCollection('projects')
 ---
 
 <section id="projects" class="w-full">
-    <header>
-        <h1 class="text-white text-5xl font-[Bebas_Neue] text-center mb-4">
-            Proyectos 🚀
-        </h1>
-    </header>
-    <main>
-        <div class="grid md:grid-cols-2 gap-4">
-            {
-                projects.map((project) => (
-                    <Card
-                        title={project.data.title}
-                        description={project.data.description}
-                    >
-                        <a href={project.data.github} slot="after-title" class="hover:scale-110 transition-transform duration-100 ease-out hover:ease-in">
-                            <Github width={24} height={24} />
-                        </a>
-                        <div slot="image">
-                            <a
-                                class="w-full h-fit relative"
-                                href={project.data.href}
-                            >
-                                <div class="bg-black/50 absolute w-full h-full top-0 flex justify-center items-center">
-                                    <OpenInNew />
-                                </div>
-                                <img
-                                    src={project.data.imgSrc}
-                                    alt={`${project.data.title} preview`}
-                                />
-                            </a>
-                        </div>
-                        <div slot="footer" class="[&>span]:m-1 flex flex-wrap">
-                            {project.data.stack.map((label) => (
-                                <Chip>
-                                    <i slot="icon">
-                                        <Icon name={label} />
-                                    </i>
-                                    {label}
-                                </Chip>
-                            ))}
-                        </div>
-                    </Card>
-                ))
-            }
-        </div>
-    </main>
+  <header>
+    <h1 class="text-white text-5xl font-[Bebas_Neue] text-center mb-4">
+      Proyectos 🚀
+    </h1>
+  </header>
+  <main>
+    <div class="grid md:grid-cols-2 gap-4">
+      {
+        projects.map((project) => (
+          <Card
+            title={project.data.title}
+            description={project.data.description}
+          >
+            <a
+              href={project.data.github}
+              slot="after-title"
+              class="hover:scale-110 transition-transform duration-100 ease-out hover:ease-in"
+            >
+              <Github />
+            </a>
+            <div slot="image">
+              <a class="w-full h-fit relative" href={project.data.href}>
+                <div class="bg-black/50 absolute w-full h-full top-0 flex justify-center items-center">
+                  <OpenInNew />
+                </div>
+                <img
+                  src={project.data.imgSrc}
+                  alt={`${project.data.title} preview`}
+                />
+              </a>
+            </div>
+            <div slot="footer" class="[&>span]:m-1 flex flex-wrap">
+              {project.data.stack.map((label) => (
+                <Chip>
+                  <i slot="icon">
+                    <Icon name={label} />
+                  </i>
+                  {label}
+                </Chip>
+              ))}
+            </div>
+          </Card>
+        ))
+      }
+    </div>
+  </main>
 </section>
 
 <style>
-    a > div {
-        z-index: 1;
-    }
+  a > div {
+    z-index: 1;
+  }
 
-    img {
-        z-index: 0;
-        transition: transform 200ms ease-out;
-    }
+  img {
+    z-index: 0;
+    transition: transform 200ms ease-out;
+  }
 
-    a:hover > img {
-        transition-timing-function: ease-in;
-        transform: scale(1.15);
-    }
+  a:hover > img {
+    transition-timing-function: ease-in;
+    transform: scale(1.15);
+  }
 
-    a > div {
-        transition: background-color 200ms ease-out;
-    }
+  a > div {
+    transition: background-color 200ms ease-out;
+  }
 
-    a:hover > div {
-        transition-timing-function: ease-in;
-        background-color: #00000040;
-    }
+  a:hover > div {
+    transition-timing-function: ease-in;
+    background-color: #00000040;
+  }
 </style>
