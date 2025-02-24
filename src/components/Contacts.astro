@@ -1,29 +1,15 @@
 ---
-import { githubRoute, linkedInRoute, xRoute } from "../data/Links";
-import Github from "../icons/Github.astro";
-import LinkedIn from "../icons/LinkedIn.astro";
-import X from "../icons/X.astro";
+import Github from '../icons/Github.astro'
+import LinkedIn from '../icons/LinkedIn.astro'
+import X from '../icons/X.astro'
+import SocialChip from './SocialChip.astro'
 ---
 
-<div class="flex gap-3">
-    <a href={githubRoute}>
-        <Github/>
-    </a>
-    <a href={linkedInRoute}>
-        <LinkedIn/>
-    </a>
-    <a href={xRoute}>
-        <X/>
-    </a>
+<div class="flex gap-2">
+  <SocialChip href="https://github.com/SantiagoBarahona"><Github /></SocialChip>
+  <SocialChip
+    href="https://www.linkedin.com/in/santiago-zapata-barahona-4b489320b/"
+    ><LinkedIn /></SocialChip
+  >
+  <SocialChip href="https://x.com/UribeEsUnHP"><X /></SocialChip>
 </div>
-
-<style>
-    a{
-        transition: transform 100ms ease-in;
-    }
-
-    a:hover{
-        transition-timing-function: ease-out;
-        transform: scale(1.15);
-    }
-</style>
