@@ -1,6 +1,5 @@
 ---
 import Navbar from '@components/Navbar.astro'
-import '../global.css'
 ---
 
 <!doctype html>
@@ -29,6 +28,8 @@ import '../global.css'
 </html>
 
 <style is:global>
+  @import 'tailwindcss';
+
   /* CSS HSL */
   :root {
     --pale-purple: hsla(309, 51%, 90%, 1);
