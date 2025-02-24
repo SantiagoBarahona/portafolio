@@ -1,0 +1,31 @@
+---
+interface Props {
+  class?: string
+  href: string
+}
+
+const { class: className, href } = Astro.props
+---
+
+<a
+  href={href}
+  class:list={[
+    'border border-gray-500/20 bg-black/5 hover:bg-black/15 p-2 rounded-full flex gap-2 w-fit items-center shadow-md shadow-black',
+    className,
+  ]}
+>
+  <slot />
+</a>
+
+<style>
+  a {
+    transition:
+      transform 100ms ease-in,
+      background-color 100ms ease-in;
+  }
+
+  a:hover {
+    transition-timing-function: ease-out;
+    transform: scale(1.15);
+  }
+</style>

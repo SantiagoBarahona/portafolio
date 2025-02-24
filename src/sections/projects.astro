@@ -5,6 +5,7 @@ import Chip from '../components/Chip.astro'
 import Icon from '../components/Icon.astro'
 import OpenInNew from '../icons/OpenInNew.astro'
 import Github from '../icons/Github.astro'
+import SocialChip from '@components/SocialChip.astro'
 
 const projects = await getCollection('projects')
 ---
@@ -23,13 +24,9 @@ const projects = await getCollection('projects')
             title={project.data.title}
             description={project.data.description}
           >
-            <a
-              href={project.data.github}
-              slot="after-title"
-              class="hover:scale-110 transition-transform duration-100 ease-out hover:ease-in"
-            >
+            <SocialChip href={project.data.github} slot="after-title">
               <Github />
-            </a>
+            </SocialChip>
             <div slot="image">
               <a class="w-full h-fit relative" href={project.data.href}>
                 <div class="bg-black/50 absolute w-full h-full top-0 flex justify-center items-center">
@@ -44,9 +41,7 @@ const projects = await getCollection('projects')
             <div slot="footer" class="[&>span]:m-1 flex flex-wrap">
               {project.data.stack.map((label) => (
                 <Chip>
-                  <i slot="icon">
-                    <Icon name={label} />
-                  </i>
+                  <Icon name={label} />
                   {label}
                 </Chip>
               ))}
