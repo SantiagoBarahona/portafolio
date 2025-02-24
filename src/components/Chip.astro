@@ -1,3 +1,14 @@
-<span class="bg-black text-white py-1 px-2 rounded-full flex gap-2 w-fit items-center">
-    <slot name="icon"/> <slot/>
+---
+interface Props {
+  class?: string
+}
+---
+
+<span
+  class:list={[
+    'border border-gray-500/20 bg-black py-1 px-2 rounded-full flex gap-2 w-fit items-center text-white',
+    Astro.props.class,
+  ]}
+>
+  <slot />
 </span>
