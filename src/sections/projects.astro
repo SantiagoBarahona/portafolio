@@ -24,7 +24,11 @@ const projects = await getCollection('projects')
             title={project.data.title}
             description={project.data.description}
           >
-            <SocialChip href={project.data.github} slot="after-title">
+            <SocialChip
+              href={project.data.github}
+              slot="after-title"
+              class="ml-auto"
+            >
               <Github />
             </SocialChip>
             <div slot="image">
