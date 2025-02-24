@@ -9,7 +9,7 @@ const { class: className, style = 'primary', href } = Astro.props
 const Component = href ? 'a' : 'button'
 const styles: Record<string, string> = {
   primary:
-    'bg-fuchsia-600/80 border border-solid border-white/20 hover:bg-fuchsia-600 text-white hover:shadow-white/20',
+    'bg-fuchsia-600/80 border border-solid border-white/20 hover:bg-fuchsia-600 text-white hover:shadow-white/20 rounded-md',
 }
 
 const currentStyle = styles[style]
