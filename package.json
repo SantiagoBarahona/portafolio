@@ -9,17 +9,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.6",
-    "astro": "^5.3.0",
-    "tailwindcss": "^4.0.6"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^5.15.8",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "prettier": "^3.5.1"
+    "prettier": "^3.8.2"
   },
   "prettier": {
     "printWidth": 80,
     "tabWidth": 2,
     "singleQuote": true,
     "semi": false
+  },
+  "pnpm": {
+    "overrides": {
+      "picomatch": ">=2.3.2",
+      "mdast-util-to-hast": ">=13.2.1"
+    }
   }
 }
