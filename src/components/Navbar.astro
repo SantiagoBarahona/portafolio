@@ -20,26 +20,28 @@ const links = [
 ---
 
 <nav
-  class="fixed top-0 z-10 w-screen flex items-center px-6 md:px-16 py-3 text-white font-[Bebas_Neue] text-xl"
+  class="fixed top-0 z-10 w-screen py-3 text-white font-[Bebas_Neue] text-xl"
 >
-  <a href="/#hero" class="brand-mark mr-auto text-2xl tracking-widest text-blue-400 hover:text-blue-300 transition-colors duration-200">
-    SZ
-  </a>
-  <ul class="flex gap-1">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="nav-link px-3 py-1 rounded-md text-white/40 hover:text-white transition-colors duration-150 hover:ease-in ease-out navbar-link"
-            id={link.href}
-            href={link.href}
-          >
-            {link.label}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="flex items-center px-6 md:px-16 max-w-[1000px] mx-auto">
+    <a href="/#hero" class="brand-mark mr-auto text-2xl tracking-widest text-blue-400 hover:text-blue-300 transition-colors duration-200">
+      SZ
+    </a>
+    <ul class="flex gap-1">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              class="nav-link px-3 py-1 rounded-md text-white/40 hover:text-white transition-colors duration-150 hover:ease-in ease-out navbar-link"
+              id={link.href}
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </nav>
 
 <style>
