@@ -5,9 +5,10 @@ const projectSchema = z.object({
   title: z.string(),
   description: z.string(),
   stack: z.array(z.string()),
-  href: z.string(),
-  imgSrc: z.string(),
-  github: z.string(),
+  href: z.string().optional(),
+  imgSrc: z.string().optional(),
+  videoSrc: z.string().optional(),
+  github: z.string().optional(),
 });
 
 const projects = defineCollection({

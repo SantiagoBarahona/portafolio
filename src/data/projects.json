@@ -1,20 +1,17 @@
 [
   {
-    "id": "1",
-    "title": "Gran Hotel",
-    "description": "Desarrollé la nueva pagina web de este reconocido hotel ubicado en el centro de Medellín, remplazando la web antigua por un diseño moderno y mejoré el rendimiento de la página.",
-    "stack": ["Astro", "Tailwind"],
-    "href": "https://gran-hotel.vercel.app/",
-    "imgSrc": "/projects/gran-hotel-preview.webp",
-    "github": "https://github.com/SantiagoBarahona/gran-hotel"
+    "id": "4",
+    "title": "Danigurumi",
+    "description": "Tienda en línea completa para la venta de productos de crochet artesanales. Motor de e-commerce con MedusaJS, búsqueda con Meilisearch, pagos locales colombianos (Nequi, Bancolombia, PSE) con Wompi, logística con EnvioClick. CI/CD con GitHub Actions, pruebas con Jest y Playwright.",
+    "stack": ["Next", "TypeScript", "Tailwind", "MedusaJS", "Postgres", "Redis", "Meilisearch", "Wompi", "Jest", "Playwright"],
+    "href": "https://danigurumi.com",
+    "imgSrc": "/projects/danigurumi-preview.webp"
   },
   {
-    "id": "2",
-    "title": "Primehotel",
-    "description": "Desarollé una aplicación web desde cero con shadcn para la gestión de reservas de un hotel, cuenta con login en Auth0 y usé Neon para la base de datos",
-    "stack": ["Next", "Tailwind", "Postgres", "Auth0", "Neon"],
-    "href": "https://primehotel.vercel.app/",
-    "imgSrc": "/projects/primehotel-preview.webp",
-    "github": "https://github.com/SantiagoBarahona/primehotel"
+    "id": "3",
+    "title": "Sistema de gestión operativa - las vegas",
+    "description": "MVP de gestión multi-sede para una franquicia de panadería con 5 puntos de venta. Incluye control de inventario, cálculo de costo promedio unitario (NIC 2), dashboard gerencial y autenticación con AWS Cognito. Proyecto de ingeniería en equipo — Universidad de Antioquia.",
+    "stack": ["Next", "TypeScript", "Tailwind", "Java", "Spring Boot", "AWS Cognito"],
+    "videoSrc": "/videos/demo_las_vegas.mp4"
   }
 ]

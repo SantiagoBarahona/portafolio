@@ -1,22 +1,42 @@
 ---
 import AstroIcon from "../icons/AstroIcon.astro";
 import Auth0 from "../icons/Auth0.astro";
+import AWSCognito from "../icons/AWSCognito.astro";
+import Java from "../icons/Java.astro";
+import Jest from "../icons/Jest.astro";
+import MedusaJS from "../icons/MedusaJS.astro";
+import Meilisearch from "../icons/Meilisearch.astro";
 import Neon from "../icons/Neon.astro";
 import Next from "../icons/Next.astro";
+import Playwright from "../icons/Playwright.astro";
 import Postgres from "../icons/Postgres.astro";
+import Redis from "../icons/Redis.astro";
+import SpringBoot from "../icons/SpringBoot.astro";
 import Tailwind from "../icons/Tailwind.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Wompi from "../icons/Wompi.astro";
 
 interface Props {
-    name: "Astro" | "Tailwind" | "Next" | "Postgres" | string;
+    name: string;
 }
 
 const { name } = Astro.props;
 ---
 
 {name == "Astro" && <AstroIcon />}
-{name == "Tailwind" && <Tailwind />}
-{name == "Next" && <Next />}
-{name == "Postgres" && <Postgres />}
 {name == "Auth0" && <Auth0 />}
+{name == "AWS Cognito" && <AWSCognito />}
+{name == "Java" && <Java />}
+{name == "Jest" && <Jest />}
+{name == "MedusaJS" && <MedusaJS />}
+{name == "Meilisearch" && <Meilisearch />}
 {name == "Neon" && <Neon />}
+{name == "Next" && <Next />}
+{name == "Playwright" && <Playwright />}
+{name == "Postgres" && <Postgres />}
+{name == "Redis" && <Redis />}
+{name == "Spring Boot" && <SpringBoot />}
+{name == "Tailwind" && <Tailwind />}
+{name == "TypeScript" && <TypeScript />}
+{name == "Wompi" && <Wompi />}
 

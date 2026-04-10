@@ -23,26 +23,43 @@ const projects = await getCollection('projects')
           title={project.data.title}
           description={project.data.description}
         >
-          <SocialChip
-            href={project.data.github}
-            slot="after-title"
-            class="ml-auto text-xs"
-          >
-            <Github /> GitHub
-          </SocialChip>
+          {project.data.github && (
+            <SocialChip
+              href={project.data.github}
+              slot="after-title"
+              class="ml-auto text-xs"
+            >
+              <Github /> GitHub
+            </SocialChip>
+          )}
           <div slot="image">
-            <a class="project-link w-full h-fit relative block overflow-hidden" href={project.data.href}>
-              <div class="project-overlay absolute w-full h-full top-0 flex justify-center items-center">
-                <div class="project-icon">
-                  <OpenInNew />
+            {project.data.videoSrc ? (
+              <video
+                class="project-video w-full block"
+                src={project.data.videoSrc}
+                controls
+                playsinline
+              />
+            ) : project.data.href ? (
+              <a class="project-link w-full h-fit relative block overflow-hidden" href={project.data.href}>
+                <div class="project-overlay absolute w-full h-full top-0 flex justify-center items-center">
+                  <div class="project-icon">
+                    <OpenInNew />
+                  </div>
                 </div>
-              </div>
+                <img
+                  class="project-img"
+                  src={project.data.imgSrc}
+                  alt={`${project.data.title} preview`}
+                />
+              </a>
+            ) : (
               <img
-                class="project-img"
+                class="project-img-static"
                 src={project.data.imgSrc}
                 alt={`${project.data.title} preview`}
               />
-            </a>
+            )}
           </div>
           <div slot="footer" class="flex flex-wrap gap-2 pt-1">
             {project.data.stack.map((label) => (
@@ -109,5 +126,16 @@ const projects = await getCollection('projects')
 
   .project-link:hover .project-img {
     transform: scale(1.06);
+  }
+
+  .project-img-static {
+    display: block;
+    width: 100%;
+  }
+
+  .project-video {
+    display: block;
+    width: 100%;
+    object-fit: cover;
   }
 </style>
