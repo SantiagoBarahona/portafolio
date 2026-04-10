@@ -6,9 +6,17 @@ interface Props {
 
 <span
   class:list={[
-    'border border-gray-500/20 bg-black py-1 px-2 rounded-full flex gap-2 w-fit items-center text-white',
+    'chip py-1 px-3 rounded-full flex gap-2 w-fit items-center text-sm text-slate-300',
     Astro.props.class,
   ]}
 >
   <slot />
 </span>
+
+<style>
+  .chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+</style>

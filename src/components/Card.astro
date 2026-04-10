@@ -10,33 +10,56 @@ const { title, description, class: className } = Astro.props
 
 <article
   class:list={[
-    'bg-white shadow-md shadow-black overflow-hidden w-fit rounded-md',
+    'glass-card rounded-xl overflow-hidden w-fit',
     className,
   ]}
 >
   <div class="overflow-hidden">
     <slot name="image" />
   </div>
-  <div class="px-4 py-2 text-black">
-    <div class="flex gap-2 mb-2 items-end">
-      <h2 class="text-3xl font-[Bebas_Neue]">{title}</h2>
+  <div class="px-5 py-3 text-[var(--text-primary)]">
+    <div class="flex gap-2 mb-1 items-end">
+      <h2 class="text-3xl font-[Bebas_Neue] text-white">{title}</h2>
       <slot name="after-title" />
     </div>
-    <p class="text-sm text-gray-800">{description}</p>
+    {description && <p class="text-sm text-[var(--text-secondary)]">{description}</p>}
     <slot />
   </div>
   {
     Astro.slots.content && (
-      <div class="px-4 pb-2">
+      <div class="px-5 pb-4">
         <slot name="content" />
       </div>
     )
   }
   {
     Astro.slots.footer && (
-      <div class="px-4 pb-2">
+      <div class="px-5 pb-4">
         <slot name="footer" />
       </div>
     )
   }
 </article>
+
+<style>
+  .glass-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition:
+      border-color 0.3s ease,
+      background 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .glass-card:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-accent);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(59, 130, 246, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  }
+</style>

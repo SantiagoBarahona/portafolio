@@ -1,64 +1,143 @@
 ---
 import Card from '../components/Card.astro'
+
+const birthDate = new Date(2003, 2, 10) // marzo = mes 2 (0-indexed)
+const now = new Date()
+let age = now.getFullYear() - birthDate.getFullYear()
+const hasBirthdayPassed =
+  now.getMonth() > birthDate.getMonth() ||
+  (now.getMonth() === birthDate.getMonth() && now.getDate() >= birthDate.getDate())
+if (!hasBirthdayPassed) age--
 ---
 
 <section id="about">
-  <h1 class="text-white text-5xl font-[Bebas_Neue] text-center mb-4">
-    Acerca de mí 🧑‍💻
-  </h1>
-  <div class="text-white grid lg:grid-cols-2 gap-4 justify-center">
+  <div class="section-header">
+    <h1 class="section-title font-[Bebas_Neue]">Acerca de mí</h1>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="text-white grid lg:grid-cols-2 gap-5 justify-center">
     <Card
       title="Santiago Zapata Barahona"
-      description="Desarollador Full Stack"
+      description="Desarrollador Full Stack"
       class="w-full"
     >
       <img
         slot="image"
         src="/santiago.webp"
         alt="Retrato de Santiago Zapata Barahona"
-        class="w-full max-h-[300px] object-cover object-center"
+        class="w-full max-h-[280px] object-cover object-center"
         width={959}
         height={1280}
       />
       <div slot="content">
-        <ul class="text-black">
-          <li>🗓 22 años</li>
-          <li>📍 Medellín, Antioquia, Colombia</li>
-          <li>🎓 Estudiante de Ingeniería de Sistemas</li>
-          <li>🚇 Conductor de trenes</li>
+        <ul class="info-list">
+          <li><span class="info-icon">🗓</span> {age} años</li>
+          <li><span class="info-icon">📍</span> Medellín, Antioquia, Colombia</li>
+          <li><span class="info-icon">🎓</span> Estudiante de Ingeniería de Sistemas</li>
+          <li><span class="info-icon">🚇</span> Conductor de trenes</li>
         </ul>
       </div>
     </Card>
-    <div
-      class="flex flex-col justify-between [&>article]:mb-4 [&>article]:lg:mb-0 text-pretty [&_h2]:font-[Bebas_Neue] [&_h2]:text-2xl [&_h2]:text-blue-600"
-    >
-      <article>
+
+    <div class="flex flex-col justify-between gap-4">
+      <article class="about-article">
         <h2>Estudios</h2>
         <p>
           Actualmente estudio <strong>Ingeniería de Sistemas</strong> en la Universidad
-          de Antioquia, estoy cursando el sexto semestre. Aquí he aprendido temas
-          importantes como patrones de diseño, estructuras de datos, metodologias
-          agiles (especialmente SCRUM), logica de programación, entre otras.
+          de Antioquia, estoy cursando el sexto semestre. He aprendido patrones
+          de diseño, estructuras de datos, metodologías ágiles (especialmente SCRUM),
+          lógica de programación, entre otras.
         </p>
       </article>
 
-      <article>
+      <article class="about-article">
         <h2>Conductor de trenes</h2>
         <p>
-          Trabajo como <strong>Conductor del Metro de Medellín</strong>, en este
-          trabajo he desarollado habilidades como el trabajo en equipo, trabajo
-          bajo presión, la responsabilidad y puntualidad.
+          Trabajo como <strong>Conductor del Metro de Medellín</strong>. He
+          desarrollado habilidades como trabajo en equipo, trabajo bajo presión,
+          responsabilidad y puntualidad.
         </p>
       </article>
 
-      <article>
+      <article class="about-article">
         <h2>Objetivos</h2>
         <p>
-          Me encuentro en la búsqueda de experiencia laboral como desarrollador,
-          quiero aplicar todos mis conocimientos y aptitudes para aportar a un
-          equipo en las soluciones de problemas con desarrollo de software.
+          Busco experiencia laboral como desarrollador. Quiero aplicar mis
+          conocimientos y aptitudes para aportar a un equipo en la solución de
+          problemas con desarrollo de software.
         </p>
       </article>
     </div>
   </div>
 </section>
+
+<style>
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .section-line {
+    width: 2.5rem;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .info-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .about-article {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .about-article:hover {
+    border-color: var(--border-accent);
+    background: var(--surface-hover);
+  }
+
+  .about-article h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  .about-article p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .about-article strong {
+    color: var(--text-primary);
+  }
+</style>

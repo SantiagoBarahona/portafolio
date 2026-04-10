@@ -9,8 +9,10 @@ const { class: className, href } = Astro.props
 
 <a
   href={href}
+  target="_blank"
+  rel="noopener noreferrer"
   class:list={[
-    'border border-gray-500/20 bg-black/5 hover:bg-black/15 p-2 rounded-full flex gap-2 w-fit items-center shadow-md shadow-black',
+    'social-chip px-3 py-1.5 rounded-full flex gap-2 w-fit items-center text-sm text-slate-300 hover:text-white',
     className,
   ]}
 >
@@ -18,14 +20,19 @@ const { class: className, href } = Astro.props
 </a>
 
 <style>
-  a {
+  .social-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition:
-      transform 100ms ease-in,
-      background-color 100ms ease-in;
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease,
+      color 0.2s ease;
   }
 
-  a:hover {
-    transition-timing-function: ease-out;
-    transform: scale(1.15);
+  .social-chip:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
   }
 </style>

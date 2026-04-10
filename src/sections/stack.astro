@@ -18,102 +18,86 @@ import Java from '@icons/Java.astro'
 import Python from '@icons/Python.astro'
 ---
 
-<section id="stack" class="text-gray-800">
-  <h1 class="text-5xl font-[Bebas_Neue] text-center text-white mb-4">
-    Tecnologías 🛠
-  </h1>
-  <div class="grid sm:grid-cols-2 [&>article]:w-full gap-4">
+<section id="stack">
+  <div class="section-header">
+    <h1 class="section-title font-[Bebas_Neue]">Tecnologías</h1>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-5 [&>article]:w-full">
     <Card title="Frontend">
-      <div
-        slot="content"
-        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-      >
-        <span>
-          <HTML5 />
-          HTML
-        </span>
-        <span>
-          <CSS />
-          CSS
-        </span>
-        <span>
-          <JavaScript />
-          JavaScript
-        </span>
-        <span>
-          <React />
-          React
-        </span>
-        <span>
-          <Tailwind />
-          Tailwind
-        </span>
-        <span>
-          <Figma />
-          Figma
-        </span>
+      <div slot="content" class="tech-grid">
+        <span class="tech-item"><HTML5 />HTML</span>
+        <span class="tech-item"><CSS />CSS</span>
+        <span class="tech-item"><JavaScript />JavaScript</span>
+        <span class="tech-item"><React />React</span>
+        <span class="tech-item"><Tailwind />Tailwind</span>
+        <span class="tech-item"><Figma />Figma</span>
       </div>
     </Card>
+
     <Card title="Backend">
-      <div
-        slot="content"
-        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-      >
-        <span>
-          <Node />
-          NodeJs
-        </span>
-        <span>
-          <AstroIcon />
-          Astro
-        </span>
-        <span>
-          <Next />
-          Next
-        </span>
-        <span>
-          <Postgres width={24} height={24} />
-          Postgres
-        </span>
-        <span>
-          <Express />
-          ExpressJs
-        </span>
-        <span>
-          <Neon />
-          Neon
-        </span>
+      <div slot="content" class="tech-grid">
+        <span class="tech-item"><Node />NodeJs</span>
+        <span class="tech-item"><AstroIcon />Astro</span>
+        <span class="tech-item"><Next />Next</span>
+        <span class="tech-item"><Postgres width={24} height={24} />Postgres</span>
+        <span class="tech-item"><Express />ExpressJs</span>
+        <span class="tech-item"><Neon />Neon</span>
       </div>
     </Card>
+
     <Card title="Herramientas">
-      <div
-        slot="content"
-        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-      >
-        <span>
-          <Git />
-          Git
-        </span>
-        <span>
-          <Github />
-          GitHub
-        </span>
+      <div slot="content" class="tech-grid">
+        <span class="tech-item"><Git />Git</span>
+        <span class="tech-item"><Github />GitHub</span>
       </div>
     </Card>
+
     <Card title="Otros lenguajes">
-      <div
-        slot="content"
-        class="flex flex-wrap gap-4 [&>span]:flex [&>span]:flex-col [&>span]:items-center"
-      >
-        <span>
-          <Java />
-          Java
-        </span>
-        <span>
-          <Python />
-          Python
-        </span>
+      <div slot="content" class="tech-grid">
+        <span class="tech-item"><Java />Java</span>
+        <span class="tech-item"><Python />Python</span>
       </div>
     </Card>
   </div>
 </section>
+
+<style>
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .section-line {
+    width: 2.5rem;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding: 0.6rem 0.8rem;
+    cursor: default;
+  }
+</style>
